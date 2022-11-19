@@ -1,12 +1,10 @@
 <template>
     <header>
-        <h1>Header</h1>
+        <h1>80%</h1>
         <div class="menuWrap">
             <ul class="menu">
-                <li><a href="#">메뉴1</a></li>
-                <li><a href="#">메뉴2</a></li>
-                <li><a href="#">메뉴3</a></li>
-                <li><a href="#">메뉴4</a></li>
+                <input type="text" class="searchform" placeholder="검색어를 입력하세요.">
+                <button type="submit" class="searchsubmit" value="검색">검색</button>
             </ul>
         </div>
     </header>
@@ -19,10 +17,9 @@ export default {
 </script>
 <style scoped>
 header{width: 100%; text-align: center; position: relative; height: 120px; border-bottom: 1px solid #35495e;}
-header h1{position: absolute; top: 0; left: 100px;}
+header h1{font-size: 70px; position: absolute; top: -20px; left: 50px; color: black;}
 header ul.menu::after{display: block; clear: both; content: '';}
-header ul.menu{position: absolute; top: 20px; right: 50px;}
-header ul.menu li{float: left; padding: 10px 20px; list-style: none;}
-
-a{text-decoration: none; color: coral;}
+header ul.menu{position: absolute; top: 30px; right: 10px;}
+input.searchform{width: 650px; height: 40px;}
+button.searchsubmit{width:50px; height: 43px; background-color: black; border: 1px solid black; color: white;}
 </style>
