@@ -23,12 +23,12 @@
                 <input type="text" id="email" v-model="email" />
             </div>
 			<div class="signupForm">
-				<label for="position">학교 </label>
-				<input type="text" id="school" v-model="school" />
+				<label for="position">학과 </label>
+				<input type="text" id="magor" v-model="school" />
 			</div>
 			<div class="signupForm">
-				<label for="teamName">학과 </label>
-				<input type="text" id="major" v-model="major" />
+				<label for="teamName">전화번호 </label>
+				<input type="text" id="phone" v-model="major" />
 			</div>
 			<button type="submit">회원가입</button>
 		</form>
