@@ -1,32 +1,33 @@
 <template>
 	<div class="container">
-		<form @submit.prevent="submitForm">
-			<div>
-                <label for="name">이름</label>
+        <h1>회원가입</h1>
+		<form @submit.prevent="submitForm" class="signUp">
+			<div class="signupForm">
+                <label for="name">이름 </label>
 				<input type="text" id="name" v-model="name" />
 			</div>
-            <div>
-				<label for="id">아이디</label>
+            <div class="signupForm">
+				<label for="id">아이디 </label>
 				<input type="text" id="id" v-model="id" />
 			</div>
-			<div>
-                <label for="password">비밀번호</label>
+			<div class="signupForm">
+                <label for="password">비밀번호 </label>
 				<input type="password" id="password" v-model="password" />
 			</div>
-			<div>
-                <label for="passwordConfirm">비밀번호 확인</label>
+			<div class="signupForm">
+                <label for="passwordConfirm">비밀번호 확인 </label>
 				<input type="password" id="passwordConfirm" v-model="passwordConfirm" />
 			</div>
-            <div>
-                <label for="email">이메일</label>
+            <div class="signupForm">
+                <label for="email">이메일 </label>
                 <input type="text" id="email" v-model="email" />
             </div>
-			<div>
-				<label for="position">학교</label>
+			<div class="signupForm">
+				<label for="position">학교 </label>
 				<input type="text" id="school" v-model="school" />
 			</div>
-			<div>
-				<label for="teamName">학과</label>
+			<div class="signupForm">
+				<label for="teamName">학과 </label>
 				<input type="text" id="major" v-model="major" />
 			</div>
 			<button type="submit">회원가입</button>
@@ -56,4 +57,47 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.signUp {
+    width: 680px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+}
+h1 {
+    padding: 30px 0;
+    font-size: 50px;
+}
+.signupForm {
+    padding-bottom: 30px;
+    width: 650px;
+    margin: auto;
+}
+label {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+input {
+    width: 400px;
+    height: 30px;
+    float: right;
+    margin-right: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+</style>
