@@ -20,7 +20,7 @@
 			</div>
             <div class="signupForm">
                 <label for="email">이메일 </label>
-                <input type="text" id="email" v-model="email" />
+                <input type="email" id="email" v-model="email" />
             </div>
 			<div class="signupForm">
 				<label for="position">학과 </label>
@@ -30,7 +30,7 @@
 				<label for="teamName">전화번호 </label>
 				<input type="text" id="phone" v-model="major" />
 			</div>
-			<button type="submit">회원가입</button>
+			<input type="submit" class="submit" value="회원가입"/>
 		</form>
 	</div>
 </template>
@@ -91,13 +91,14 @@ input {
     border-radius: 5px;
     border: 1px solid black;
 }
-button {
+input.submit {
     width: 100px;
     height: 40px;
     font-size: 15px;
     background-color: black;
     color: white;
     border-radius: 5px;
+    float: none;
 }
 
 </style>
