@@ -2,10 +2,10 @@
 	<div class="container">
         <h1>회원가입</h1>
 		<form @submit.prevent="submitForm" class="signUp">
-			<div class="signupForm">
+			<!--div class="signupForm">
                 <label for="name">이름 </label>
 				<input type="text" id="name" v-model="name" />
-			</div>
+			</div-->
             <div class="signupForm">
 				<label for="id">아이디 </label>
 				<input type="text" id="id" v-model="id" />
@@ -16,7 +16,7 @@
 			</div>
 			<div class="signupForm">
                 <label for="passwordConfirm">비밀번호 확인 </label>
-				<input type="password" id="passwordConfirm" v-model="passwordConfirm" />
+				<input type="password" id="password2" v-model="passwordConfirm" />
 			</div>
             <div class="signupForm">
                 <label for="email">이메일 </label>
@@ -24,13 +24,15 @@
             </div>
 			<div class="signupForm">
 				<label for="position">학과 </label>
-				<input type="text" id="magor" v-model="school" />
+				<input type="text" id="major" v-model="school" />
 			</div>
 			<div class="signupForm">
 				<label for="teamName">전화번호 </label>
 				<input type="text" id="phone" v-model="major" />
 			</div>
-			<input type="submit" class="submit" value="회원가입"/>
+            <div class="signupForm">
+                <input type="submit" class="submit" value="회원가입"/>
+            </div>
 		</form>
 	</div>
 </template>
@@ -40,12 +42,11 @@ export default {
 	name: 'SignupForm',
 	data() {
 		return {
-            name: '',
+            //name: '',
             id: '',
 			password: '',
-			passwordConfirm: '',
+			password2: '',
 			email: '',
-			school: '',
 			major: '',
 		};
 	},
@@ -60,7 +61,7 @@ export default {
 <style scoped>
 .signUp {
     width: 680px;
-    height: 500px;
+    height: 530px;
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
@@ -72,7 +73,7 @@ h1 {
     font-size: 50px;
 }
 .signupForm {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     width: 650px;
     margin: auto;
 }
@@ -99,6 +100,7 @@ input.submit {
     color: white;
     border-radius: 5px;
     float: none;
+    margin-bottom: 10px;
 }
 
 </style>
